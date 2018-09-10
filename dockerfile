@@ -8,6 +8,8 @@ ENV PROJECT_ROOT /opt/app
 RUN mkdir -p $PROJECT_ROOT
 WORKDIR $PROJECT_ROOT
 
+COPY ./src $PROJECT_ROOT
+
 # Copying requirements
 COPY ./src/requirements.txt .
 RUN pip install -r requirements.txt
